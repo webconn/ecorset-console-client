@@ -131,3 +131,19 @@ struct acc_raw_data reader_get_full(int ch)
                 return ret;
         }
 }
+
+char *reader_get_name(int whoami)
+{
+        switch (whoami) {
+                case LIS3DH_ID:
+                        return "LIS3DH";
+                case LIS331DL_ID:
+                        return "LIS331DL";
+                case LIS331DLH_ID:
+                        return "LIS331DLH";
+                case 0xff:
+                        return "No device";
+                default:
+                        return "Unknown";
+        }
+}

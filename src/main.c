@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 
         printf("Scanning devices...\n");
         for (int i=0; i<4; i++) {
-                printf("Address %d, type %x\n", i, reader_get_byte(i, 0x0F));
+                printf("Address %d, type %s\n", i, reader_get_name(reader_get_byte(i, 0x0F)));
         }
 
         /*while (1) {

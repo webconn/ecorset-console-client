@@ -25,5 +25,6 @@ void reader_set_byte(int ch, int addr, int value);
 int reader_get_word(int ch, int addr);
 void reader_set_word(int ch, int addr, int value);
 struct acc_raw_data reader_get_full(int ch);
+char *reader_get_name(int whoami);
 
 #endif
